@@ -3,13 +3,14 @@
  */
 public class ProjectEulerTwo {
   public static void main(String[] args){
-    int f=1, s=2;
-    long sum =2l;
-    for(int i=3;i<4000000;i++){
-      s =s+i;
-      //System.out.print(s+"\t");
-      if(s%2==0)
-        sum += s;
+    int f=1, l=2,temp,sum=0;
+//    long sum =2l;
+    while(l<4000000){
+      if(l%2==0)
+        sum +=l;
+      temp = l;
+      l=l+f;
+      f=temp;
     }
     System.out.print("Sum = "+sum);
   }
